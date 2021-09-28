@@ -51,7 +51,7 @@ public class EstudianteDAO implements IEstudianteDAO<Estudiante> {
 
     @Override
     public void llenarTablaEstudiante(ObservableList<Estudiante> listaEstudiantes) {
-        String consulta = "SELECT * FROM estudiante";
+        String consulta = "SELECT * FROM estudiante WHERE estado = true";
         try (Connection conexion = conexionPostgreSQL.getConexion();
              Statement instruccion = conexion.createStatement();
              ResultSet resultadoConsulta = instruccion.executeQuery(consulta)) {
