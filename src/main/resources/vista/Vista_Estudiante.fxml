@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorVistaEstudiante">
+   <children>
+      <SplitPane dividerPositions="0.41854636591478694" layoutX="30.0" layoutY="41.0" prefHeight="400.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="401.0">
+               <children>
+                  <TextField fx:id="paternoTextField" layoutX="167.0" layoutY="68.0" />
+                  <TextField fx:id="maternoTextField" layoutX="167.0" layoutY="117.0" />
+                  <TextField fx:id="primerNombreTextField" layoutX="167.0" layoutY="161.0" />
+                  <TextField fx:id="segundoNombreTextField" layoutX="167.0" layoutY="203.0" />
+                  <Label layoutX="17.0" layoutY="14.0" text="Estudiante">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="67.0" text="Apellido paterno:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="116.0" text="Apellido materno:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="160.0" text="Primer nombre:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="202.0" text="Segundo nombre:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <GridPane layoutX="23.0" layoutY="354.0" prefHeight="30.0" prefWidth="274.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#clicRegistrar" text="Registrar" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                        <Button mnemonicParsing="false" onAction="#clicEliminar" text="Eliminar" GridPane.halignment="CENTER" />
+                        <Button fx:id="botonLimpiar" mnemonicParsing="false" onAction="#clicLimpiar" text="Limpiar" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="estudianteTableView" layoutX="14.0" layoutY="14.0" prefHeight="398.0" prefWidth="367.3333333333333" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="columnaIdEstudiante" prefWidth="20.0" text="ID" />
+                        <TableColumn fx:id="columnaPaterno" prefWidth="90.0" text="Paterno" />
+                      <TableColumn fx:id="columnaMaterno" prefWidth="100.0" text="Materno" />
+                      <TableColumn fx:id="columnaPrimerNombre" prefWidth="100.0" text="Primer nombre" />
+                        <TableColumn fx:id="columnaSegundoNombre" prefWidth="100.0" text="Segundo nombre" />
+                        <TableColumn fx:id="columnaEstado" prefWidth="50.0" text="Estado" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
